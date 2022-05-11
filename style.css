@@ -33,9 +33,16 @@ table tr td{
     cursor: pointer;
 }
 table tr td img{
+    transition: 0.25s;
     height: 100px;
     width: 100px;
     margin-right: 0;
+}
+table tr td img.X:hover{
+    transform: rotate(90deg);
+}
+table tr td img.O:hover{
+    transform: rotateX(180deg);
 }
 .linha{
     border-bottom: 3px dashed black;
