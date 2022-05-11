@@ -44,7 +44,7 @@ function jogada(casa){
     || (matriz[1] == 'O' && matriz[4] == 'O' && matriz[7] == 'O') || (matriz[2] == 'O' && matriz[5] == 'O' && matriz[8] == 'O')
     || (matriz[0] == 'O' && matriz[4] == 'O' && matriz[8] == 'O') || (matriz[2] == 'O' && matriz[4] == 'O' && matriz[6] == 'O')){
         alguemGanhou = true;
-        alert('Parabéns, jogador ' + jogador + ', você ganhou!!');
+        alert('O jogador "' + jogador + '" ganhou!!');
         reset();
     }
 
