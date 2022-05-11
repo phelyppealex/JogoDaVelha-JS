@@ -9,8 +9,9 @@ body{
     height: 100vh;
 }
 .titulo{
+    margin: 15px;
     font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 50px;
+    font-size: 54px;
 }
 .jogo{
     position: relative;
@@ -19,11 +20,12 @@ body{
     transform: translateX(-50%);
     left: 50%;
     width: 306px;
+    height: 100%;
 }
 table{
     position: absolute;
     transform: translateY(50%);
-    top: 50%;
+    bottom: 50%;
     width: 100%;
 }
 table tr td{
@@ -57,8 +59,9 @@ table tr td img{
     padding: 10px;
     border-radius: 7px;
     font-weight: bold;
-    transform: translateX(-50%);
-    left: 50%;
+    transform: translateX(50%);
+    right: 50%;
+    bottom: 30px;
 }
 table tr td label{
     height: 100%;
