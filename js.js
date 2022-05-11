@@ -2,6 +2,7 @@ var jogador = 'X';
 var matriz = new Array(9);
 var casaOcupada;
 var alguemGanhou = false;
+var cont = 0;
 
 function jogada(casa){
 
@@ -32,9 +33,7 @@ function jogada(casa){
         break;
         case 9: if(jogador == 'X'){document.getElementById('9X').style.display = 'block';matriz[casa-1] = 'X';}else{document.getElementById('9O').style.display = 'block';matriz[casa-1] = 'O';}
         break;
-    }
-
-    
+    }    
 
     if((matriz[0] == 'X' && matriz[1] == 'X' && matriz[2] == 'X') || (matriz[3] == 'X' && matriz[4] == 'X' && matriz[5] == 'X')
     || (matriz[6] == 'X' && matriz[7] == 'X' && matriz[8] == 'X') || (matriz[0] == 'X' && matriz[3] == 'X' && matriz[6] == 'X')
@@ -46,6 +45,7 @@ function jogada(casa){
     || (matriz[0] == 'O' && matriz[4] == 'O' && matriz[8] == 'O') || (matriz[2] == 'O' && matriz[4] == 'O' && matriz[6] == 'O')){
         alguemGanhou = true;
         alert('Parabéns, jogador ' + jogador + ', você ganhou!!');
+        reset();
     }
 
     if(jogador == 'X'){
