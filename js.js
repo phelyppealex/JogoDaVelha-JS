@@ -39,4 +39,6 @@ function reset(){
     document.getElementById('7X').style.display = 'none'; document.getElementById('7O').style.display = 'none';
     document.getElementById('8X').style.display = 'none'; document.getElementById('8O').style.display = 'none';
     document.getElementById('9X').style.display = 'none'; document.getElementById('9O').style.display = 'none';
+
+    jogador = 'X';
 }
