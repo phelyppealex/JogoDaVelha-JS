@@ -9,9 +9,9 @@ body{
     height: 100vh;
 }
 .titulo{
-    margin: 15px;
+    margin-top: 15px;
     font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 50px;
+    font-size: 60px;
 }
 .jogo{
     position: relative;
