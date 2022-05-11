@@ -19,9 +19,10 @@ table{
 }
 table tr{
     height: 100px;
+
 }
 table tr td{
-    height: 100%;
+    height: 100px;
     width: 100px;
     cursor: pointer;
 }
