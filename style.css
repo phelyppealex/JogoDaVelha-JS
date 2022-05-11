@@ -5,11 +5,13 @@
 }
 .jogo{
     position: fixed;
-    height: 306px;
+    top: 0;
+    bottom: 0;
+    transform: translateX(50%);
+    left: 50%;
     width: 306px;
 }
 table{
-    height: 100%;
     width: 100%;
 }
 table tr{
@@ -32,6 +34,11 @@ table tr td img{
 }
 .marcacao{
     display: none;
+}
+.reset{
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 table tr td label{
     height: 100%;

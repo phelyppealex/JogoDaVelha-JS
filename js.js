@@ -28,3 +28,15 @@ function jogada(casa){
         jogador = 'X';
     }
 }
+
+function reset(){
+    document.getElementById('1X').style.display = 'none'; document.getElementById('1O').style.display = 'none';
+    document.getElementById('2X').style.display = 'none'; document.getElementById('2O').style.display = 'none';
+    document.getElementById('3X').style.display = 'none'; document.getElementById('3O').style.display = 'none';
+    document.getElementById('4X').style.display = 'none'; document.getElementById('4O').style.display = 'none';
+    document.getElementById('5X').style.display = 'none'; document.getElementById('5O').style.display = 'none';
+    document.getElementById('6X').style.display = 'none'; document.getElementById('6O').style.display = 'none';
+    document.getElementById('7X').style.display = 'none'; document.getElementById('7O').style.display = 'none';
+    document.getElementById('8X').style.display = 'none'; document.getElementById('8O').style.display = 'none';
+    document.getElementById('9X').style.display = 'none'; document.getElementById('9O').style.display = 'none';
+}
