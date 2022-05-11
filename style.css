@@ -17,10 +17,6 @@ table{
     top: 60%;
     width: 100%;
 }
-table tr{
-    height: 100px;
-
-}
 table tr td{
     height: 100px;
     width: 100px;
