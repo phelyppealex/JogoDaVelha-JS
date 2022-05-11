@@ -5,15 +5,13 @@ var alguemGanhou = false;
 var cont = 0;
 
 function jogada(casa){
-
-    if(matriz[casa-1] == null){
-        casaOcupada = false;
-    }else{
-        casaOcupada = true;
-        alert('Casa ocupada!!');
+    
+    //Verifica se a jogada é válida
+    if(matriz[casa-1] != null){
         return;
     }
 
+    //
     switch(casa){
         case 1: if(jogador == 'X'){document.getElementById('1X').style.display = 'block';matriz[casa-1] = 'X';}else{document.getElementById('1O').style.display = 'block';matriz[casa-1] = 'O';}
         break;
