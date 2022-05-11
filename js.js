@@ -46,6 +46,7 @@ function jogada(casa){
         alguemGanhou = true;
         alert('O jogador "' + jogador + '" ganhou!!');
         reset();
+        return;
     }
 
     if(jogador == 'X'){
