@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Jogo da velha</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +13,9 @@
 </head>
 <body>
     <div class="jogo">
+
+        <h1 style="text-align: center;">JOGO DA VELHA</h1>
+
         <table>
             <tr>
                 <td onclick="jogada(1)" class="linha coluna">
@@ -55,8 +60,8 @@
                 </td>
             </tr>
         </table>
-    </div>
 
-    <button class="reset" onclick="reset()">RESETAR O JOGO</button>
+        <button style="text-align: center;" class="reset" onclick="reset(), isso()">RESETAR O JOGO</button>
+    </div>
 </body>
 </html>
