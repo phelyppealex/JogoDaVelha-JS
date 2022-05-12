@@ -89,3 +89,23 @@ table tr td label{
         width: 320px;
     }
 }
+
+@media screen and (max-height: 476px){
+    .jogo{
+        width: 100%;
+    }
+    table{
+        transform: translate(0, 50%);
+        right: 20px;
+    }
+    .titulo{
+        top: 20px;
+        left: 20px;
+        transform: translate(0, 0);
+    }
+    .reset{
+        transform: translate(0, 0);
+        bottom: 20px;
+        left: 20px;
+    }
+}
