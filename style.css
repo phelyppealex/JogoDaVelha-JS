@@ -103,13 +103,10 @@ table tr td label{
         top: 20px;
         left: 20px;
         transform: translate(0, 0);
+        text-align: left;
     }
     .reset{
         transform: translate(0, 0);
         bottom: 20px;
         left: 20px;
     }
-    .titulo{
-        text-align: left;
-    }
-}
