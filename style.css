@@ -24,6 +24,7 @@ body{
     height: 100%;
     background-color: rgb(17, 255, 124);
     box-shadow: 0px 0px 20px;
+    transition: .25s;
 }
 table{
     position: absolute;
@@ -31,11 +32,13 @@ table{
     right: 50%;
     bottom: 50%;
     width: 306px;
+    transition: .25s;
 }
 table tr td{
     height: 100px;
     width: 100px;
     cursor: pointer;
+    transition: .25s;
 }
 table tr td img{
     transition: 0.25s;
@@ -101,9 +104,9 @@ table tr td label{
     }
     .titulo{
         top: 20px;
-        left: 20px;
         transform: translate(0, 0);
-        text-align: left;
+        text-align: center;
+        width: 50%;
     }
     .reset{
         transform: translate(0, 0);

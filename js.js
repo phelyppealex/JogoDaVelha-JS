@@ -42,9 +42,17 @@ function jogada(casa){
     || (matriz[1] == 'O' && matriz[4] == 'O' && matriz[7] == 'O') || (matriz[2] == 'O' && matriz[5] == 'O' && matriz[8] == 'O')
     || (matriz[0] == 'O' && matriz[4] == 'O' && matriz[8] == 'O') || (matriz[2] == 'O' && matriz[4] == 'O' && matriz[6] == 'O')){
         alguemGanhou = true;
+        
         alert('O jogador "' + jogador + '" ganhou!!');
+        
         reset();
         return;
+    }
+    
+    cont++;
+    console.log(cont);
+    if(cont == 9 && !alguemGanhou){
+        alert('Deu velha');
     }
 
     if(jogador == 'X'){
@@ -68,6 +76,8 @@ function reset(){
     for (let index = 0; index < matriz.length; index++) {
         matriz[index] = null;
     }
+
+    cont = 0;
 
     alguemGanhou = false;
 
