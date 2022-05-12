@@ -12,6 +12,7 @@ body{
 .titulo{
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 50px;
+    text-align: center;
 }
 .jogo{
     position: relative;
@@ -107,5 +108,8 @@ table tr td label{
         transform: translate(0, 0);
         bottom: 20px;
         left: 20px;
+    }
+    .titulo{
+        text-align: left;
     }
 }
