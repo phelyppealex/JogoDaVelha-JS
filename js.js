@@ -1,6 +1,5 @@
 var jogador = 'X';
 var matriz = new Array(9);
-var casaOcupada;
 var alguemGanhou = false;
 var cont = 0;
 
@@ -11,7 +10,7 @@ function jogada(casa){
         return;
     }
 
-    //
+    //Efetua a jogada requisitada
     switch(casa){
         case 1: if(jogador == 'X'){document.getElementById('1X').style.display = 'block';matriz[casa-1] = 'X';}else{document.getElementById('1O').style.display = 'block';matriz[casa-1] = 'O';}
         break;
@@ -31,8 +30,25 @@ function jogada(casa){
         break;
         case 9: if(jogador == 'X'){document.getElementById('9X').style.display = 'block';matriz[casa-1] = 'X';}else{document.getElementById('9O').style.display = 'block';matriz[casa-1] = 'O';}
         break;
-    }    
+    }
 
+    //Contabiliza a jogada
+    cont++;
+    
+    //Verifica se alguém ganhou ou se deu velha
+    verificarEstado();
+
+    //Muda o jogador da vez
+    if(jogador == 'X'){
+        jogador = 'O';
+    }else{
+        jogador = 'X';
+    }
+}
+
+
+function verificarEstado(){
+    //Verifica se alguém ganhou
     if((matriz[0] == 'X' && matriz[1] == 'X' && matriz[2] == 'X') || (matriz[3] == 'X' && matriz[4] == 'X' && matriz[5] == 'X')
     || (matriz[6] == 'X' && matriz[7] == 'X' && matriz[8] == 'X') || (matriz[0] == 'X' && matriz[3] == 'X' && matriz[6] == 'X')
     || (matriz[1] == 'X' && matriz[4] == 'X' && matriz[7] == 'X') || (matriz[2] == 'X' && matriz[5] == 'X' && matriz[8] == 'X')
@@ -44,25 +60,26 @@ function jogada(casa){
         alguemGanhou = true;
         
         alert('O jogador "' + jogador + '" ganhou!!');
-        
+
+        //Reseta todas as jogadas da partida
         reset();
         return;
     }
-    
-    cont++;
+
+    //Testa se o jogo caiu em velha
     console.log(cont);
     if(cont == 9 && !alguemGanhou){
-        alert('Deu velha');
-    }
 
-    if(jogador == 'X'){
-        jogador = 'O';
-    }else{
-        jogador = 'X';
+        alert('Deu velha');
+
+        reset();
+        return;
     }
 }
 
 function reset(){
+
+    //Desfaz as jogadas de casa em casa no front
     document.getElementById('1X').style.display = 'none'; document.getElementById('1O').style.display = 'none';
     document.getElementById('2X').style.display = 'none'; document.getElementById('2O').style.display = 'none';
     document.getElementById('3X').style.display = 'none'; document.getElementById('3O').style.display = 'none';
@@ -73,13 +90,17 @@ function reset(){
     document.getElementById('8X').style.display = 'none'; document.getElementById('8O').style.display = 'none';
     document.getElementById('9X').style.display = 'none'; document.getElementById('9O').style.display = 'none';
     
+    //Desfaz as jogadas no vetor
     for (let index = 0; index < matriz.length; index++) {
         matriz[index] = null;
     }
 
+    //reinicia o contador de jogadas
     cont = 0;
 
+    //Se alguém ganhou, reseta    
     alguemGanhou = false;
 
+    //Volta a vez para o jogador 'X'
     jogador = 'X';
 }
